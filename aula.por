@@ -7,7 +7,7 @@ programa {
     leia(letra)
 
 
-     se (letra == "a" ou letra == "e" ou letra == "i" ou letra == "o" ou letra == "u") {
+     se (letra == "a" ou letra == "e") {
       escreva("Sua letra é uma vogal.")
     } senao {
       escreva("Sua letra é uma consoante")
