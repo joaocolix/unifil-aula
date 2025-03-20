@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor para o Eron</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0a0a0a;
+            font-family: Arial, sans-serif;
+            color: white;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .input-box {
+            padding: 10px;
+            width: 230px;
+            font-size: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 6px;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            padding: 10px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background: linear-gradient(45deg, #f00e42, #c00b38);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .result {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .steps {
+            text-align: left;
+            max-width: 400px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">Conversor Decimal</div>
+        <input type="number" id="decimalInput" class="input-box" placeholder="Número Decimal">
+        <button class="button" onclick="convertNumber()">Converter</button>
+        <div id="binaryResult" class="result"></div>
+        <div id="hexResult" class="result"></div>
+        <div id="steps" class="steps"></div>
+    </div>
+
+    <script>
+        function convertNumber() {
+            var decimal = parseInt(document.getElementById("decimalInput").value.trim());
+            if (isNaN(decimal) || decimal < 0) {
+                alert("Insira um número decimal válido!");
+                return;
+            }
+
+            var binary = "";
+            var hex = "";
+            var decimalCopy = decimal;
+            var stepsBinary = "<strong>Passo a passo para binário:</strong><br>";
+            var stepsHex = "<strong>Passo a passo para hexadecimal:</strong><br>";
+            var hexMap = "0123456789ABCDEF";
+
+            while (decimalCopy > 0) {
+                let remainder = decimalCopy % 2;
+                binary = remainder + binary;
+                stepsBinary += `${decimalCopy} ÷ 2 = ${Math.floor(decimalCopy / 2)}, resto = ${remainder}<br>`;
+                decimalCopy = Math.floor(decimalCopy / 2);
+            }
+
+            decimalCopy = decimal;
+            while (decimalCopy > 0) {
+                let remainder = decimalCopy % 16;
+                hex = hexMap[remainder] + hex;
+                stepsHex += `${decimalCopy} ÷ 16 = ${Math.floor(decimalCopy / 16)}, resto = ${hexMap[remainder]}<br>`;
+                decimalCopy = Math.floor(decimalCopy / 16);
+            }
+
+            document.getElementById("binaryResult").innerHTML = `Binário: <span class="highlight">${binary || 0}</span>`;
+            document.getElementById("hexResult").innerHTML = `Hexadecimal: <span class="highlight">${hex || 0}</span>`;
+            document.getElementById("steps").innerHTML = stepsBinary + "<br>" + stepsHex;
+        }
+    </script>
+
+</body>
+</html>
