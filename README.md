@@ -8,8 +8,7 @@ Objetivo: Exercício pratico
 Tecnologias: Portugol
 
 Link: null
-
-
+---
 eron.html 
 
 Matéria: Arquitetura e Organização de Computadores
