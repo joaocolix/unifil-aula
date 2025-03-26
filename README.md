@@ -17,4 +17,4 @@ Objetivo: Conversor de decimal para Binario e Hexadecimal
 
 Tecnologias: Html, CSS e JavaScript
 
-Link: https://api.apestudio.dev/eron
+URL: https://api.apestudio.dev/eron
