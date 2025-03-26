@@ -3,7 +3,7 @@ calculadora.por
 
 Matéria:  Gerência de Configuração e Controle de Versão
 
-Objetivo: Exercício pratico 
+Objetivo: Exercício GitHub | Branches, Commits e Conflitos
 
 Tecnologias: Portugol
 
