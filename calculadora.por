@@ -1,17 +1,17 @@
 programa{
   funcao inicio() {
-    inteiro num1, num2, num3, soma, multiplicacao, subtracao
+    inteiro num, num2, num3, soma, multiplicacao, subtracao
  
     escreva("Digite tres números: ")
-    leia(num1, num2, num3)
+    leia(num, num2, num3)
 
-    multiplicacao = (num1 * num2 * num3)
+    multiplicacao = (num * num2 * num3)
     escreva("A multiplicacao é: " + multiplicacao + "\n")
 
-    soma = (num1 + num2 + num3)
+    soma = (num + num2 + num3)
     escreva("A soma é: " + soma + "\n")
 
-    subtracao = (num1 - num2 - num3)
+    subtracao = (num - num2 - num3)
     escreva("A subtraçao é: " + subtracao)
 
   }
