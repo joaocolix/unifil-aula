@@ -7,7 +7,7 @@ Objetivo: Exercício pratico
 
 Tecnologias: Portugol
 
-Link: null
+
 ---
 eron.html 
 
