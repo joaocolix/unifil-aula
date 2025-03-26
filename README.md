@@ -1,6 +1,12 @@
-# aula
-Arquivos utilizados:
+# Projetos e Exercícios
+calculadora.por 
+Matéria:  Gerência de Configuração e Controle de Versão
+Objetivo: Exercício pratico 
+Tecnologias: Portugol
+Link: null
 
-calculadora.por para a matéria de Gerência de Configuração e Controle de Versão
-
-eron.html para a matéria de Arquitetura e Organização de Computadores
+eron.html 
+Matéria: Arquitetura e Organização de Computadores
+Objetivo: Conversor de decimal para Binario e Hexadecimal
+Tecnologias: Html, CSS e JavaScript
+Link: https://api.apestudio.dev/eron
